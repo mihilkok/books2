@@ -24,12 +24,7 @@ class booksController extends Controller
             ]);
         return $books;
     }
-
-
-//    public function show(books $books)
-//    {
-//        return $books;
-//    }
+    
     public function show(books $books)
     {
         $books = books::with('users')->get();
