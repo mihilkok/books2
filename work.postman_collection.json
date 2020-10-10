@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "8ed82355-0321-429c-b97c-01b8bf0f4307",
+		"name": "work",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "создание книги",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name_books",
+							"value": "new book",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/books/public/api/books/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"public",
+						"api",
+						"books",
+						"store"
+					]
+				},
+				"description": "zsadAS"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/books/public/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"books",
+								"public",
+								"api"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "вывод всех книг",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/books/public/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"public",
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "удаление книги",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/books/public/api/books/destroy/нужный id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"public",
+						"api",
+						"books",
+						"destroy",
+						"нужный id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "обновление книги",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name_books",
+							"value": "новое название",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "новое количетсво страниц",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/books/public/api/books/update/нужный id?_method=patch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"public",
+						"api",
+						"books",
+						"update",
+						"нужный id"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "patch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "вывод одной книги",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/books/public/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"public",
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
